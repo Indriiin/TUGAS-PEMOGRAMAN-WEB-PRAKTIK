@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Work Hive</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+    <div style="display: flex; height: 100vh;">
+        <div style="flex: 1; background: linear-gradient(rgba(10, 17, 69, 0.8), rgba(10, 17, 69, 0.8)), url('https://via.placeholder.com/800x600'); background-size: cover; display: flex; flex-direction: column; justify-content: center; padding: 60px; color: white;">
+            <h1 style="font-size: 32px; margin-bottom: 20px;">With us for you</h1>
+            <h2 style="font-size: 32px; margin-bottom:  20px;">Join now to access thousands of great job openings.</h2>
+        </div>
+
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 100px; background: white;">
+            <h2 style="margin: 0; color: #333;">Welcome</h2>
+            <p style="color: #888; margin-bottom: 20px;">Register your account</p>
+
+            <form action="/auth_register" method="POST">
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">First Name</label>
+                    <input type="text" name="nama" required style="width: 100%; padding: 10px; border: 1px solid #DDD; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">E-mail Address</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #DDD; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">Password</label>
+                    <input type="password" name="password" required style="width: 100%; padding: 10px; border: 1px solid #DDD; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">Phone Number</label>
+                    <input type="text" name="telp" required style="width: 100%; padding: 10px; border: 1px solid #DDD; border-radius: 5px;">
+                </div>
+                
+                <button type="submit" style="width: 100%; padding: 12px; background: #0A1145; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Create Account</button>
+            </form>
+            <p style="font-size: 13px; text-align: center; margin-top: 20px;">Already have an account? <a href="/" style="color: #0A1145; text-decoration: none; font-weight: bold;">Log In</a></p>
+        </div>
+    </div>
+</body>
+</html>
